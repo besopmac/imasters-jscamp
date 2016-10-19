@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+
+        /* Trabalhando com JSON (comunicação com o servidor, enviando e recebendo dados) */
+        var pessoa = {
+                         nome : "Bruno",
+                         sobrenome : "Nigro"
+                     };
+
+        console.log(pessoa);
+
+        // Acessando as propriedades do objeto
+        console.log(pessoa.nome);
+        console.log(pessoa.sobrenome);
+
+        // Criando um JSON a partir de uma string
+        var texto = '{ "paragrafo" : "Lorem ipsum dolor sit amet" }';
+        console.log(texto);
+
+        var obj_texto = JSON.parse(texto);
+        console.log(obj_texto);
+
+        // Criando um array de objetos
+        var clientes = {
+            "clientes" :
+            [
+                { "nome" : "Bruno", "idade" : 34 },
+                { "nome" : "Cynthia", "idade" : 27 },
+                { "nome" : "Marina", "idade" : 3 },
+                { "nome" : "Maurício", "idade" : 1 }
+            ]
+        };
+
+        console.log(clientes);
+
+    </script>
+
+</body>
+</html>
