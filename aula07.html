@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        /* Trabalhando com String */
+
+        var stringSimples = "Lorem ipsum dolor";
+        var stringEmail = new String("benigro@email.com");
+
+        var arroba    = stringEmail.indexOf("@")+1;          // Comece a indexar as posições dos caracteres ATÉ '@'
+        var ponto     = stringEmail.indexOf(".", arroba);    // Procure o conteúdo da variável arroba, APÓS '.'
+
+        // Ações, métodos e afins...
+        console.log(stringEmail.substring(arroba, ponto));        // Seleciona o domínio do email
+
+        console.log(stringEmail.substring(arroba));               // Seleciona tudo após a '@'
+
+        console.log(stringEmail.substring(0, arroba -1));         // Seleciona o nome do usuario
+
+        console.log(stringEmail.replace("email", "hotmail"));     // Substituindo "email" por "hotmail"
+
+        // Deixando tudo maiúsculo e/ou minúsculo...
+        console.log(stringEmail.toUpperCase());
+        console.log(stringEmail.toLowerCase());
+
+        // Concatenando o nome do usuário + hotmail.com e deixando tudo maiúsculo
+        console.log(stringEmail.substring(0, arroba -1).concat("@hotmail.com").toUpperCase());
+    </script>
+
+</body>
+</html>

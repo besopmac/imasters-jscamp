@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        /* Trabalhando com Funções */
+
+        function cl(mensagem) {
+            console.log(mensagem);
+        };
+
+        function soma(valor1, valor2) {
+            return(valor1 + valor2);         // Ao usar return você deve atribuí-lo...
+        };
+
+        cl("Testando a aplicação...");
+        cl({ nome : "Bruno" });
+
+        var resultadoSoma = soma(10, 50);    // ...a uma variável na qual você poderá usar depois.
+        cl(resultadoSoma);
+
+        // Function confirm();
+        confirm("Deseja prosseguir?");
+
+        // Function prompt();
+        var nomeUsuario = prompt("Informe seu nome...");
+        cl(nomeUsuario);
+    </script>
+
+</body>
+</html>

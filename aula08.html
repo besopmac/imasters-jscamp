@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        /* Trabalhando com Instruções Condicionais */
+
+        function validaEmail(email){
+            var arroba  = email.indexOf("@");
+            var ponto   = email.indexOf(".", arroba);
+            var dominio = email.substring(arroba+1);
+            var usuario = email.substring(0, arroba);
+            var espacoBranco = email.indexOf(" ");
+
+            var status = true;
+
+            // Tem espaço em branco e/ou arroba, ponto, o domínio tem pelo menos 3 caracteres?
+            if (espacoBranco != -1 || arroba == -1 || ponto == -1 || dominio.length < 3 || usuario.length < 1) {
+                status = false;
+            }
+
+            return status;
+        }
+
+        if (validaEmail("benigro@email.com")) {
+            console.log("E-mail válido para caralho...");
+        } else {
+            console.log("Seu burro!");
+        }
+
+    </script>
+
+</body>
+</html>
