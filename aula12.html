@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        // Métodos Numéricos
+
+        var numero = 100;
+        var num_string = numero.toString(); // toString é um método
+
+        var array = [];
+
+        // Definindo decimais de um valor
+        var preco = 6.987;
+        var preco_arredondado = preco.toFixed(2); // toFixed() também é um método que arredonda o valor
+
+        console.log(typeof numero);
+        console.log(typeof parseInt(num_string)); // parseInt() converte string para um inteiro
+        console.log(typeof parseFloat(preco_arredondado)); // parseFloat() converte uma string para number
+
+
+        // Exibe NaN, undefined, etc...
+        console.log(parseInt("Bruno")); // O resultado será NaN, abreviação de 'Not A Number'
+        console.log(array[1]); // undefined, ou seja a variável não está definida ou não existe
+
+        // Utilizando para verificar e informar erros
+        if(array[1] === undefined) { console.log("O índice não existe"); }
+
+    </script>
+
+</body>
+</html>

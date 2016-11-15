@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        /* Trabalhando com Instruções Condicionais */
+
+        var plano = 1;
+
+        // Operador Ternário
+        // variavel = (variavel === x) ? instrucao : outra instrucao;
+        plano = (plano === 1) ? plano : 1;
+
+        switch(plano) {
+            case 1 :
+                console.log("Plano Mensal");
+                planoMensal();
+                console.log("Voltou ao Swith");
+                break;
+            case 2 :
+                console.log("Plano Bimestral");
+                break;
+            default :
+                console.log("Plano Padrão");
+        };
+
+        function planoMensal() {
+            console.log("Executou a função planoMensal()");
+        };
+
+    </script>
+
+</body>
+</html>
