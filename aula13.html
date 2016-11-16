@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        // Object Date
+        var data = new Date(); // Exceção aquela regra de boas práticas
+        var mensagem = "";
+        var diaSemana = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+        var meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+
+        console.log(data.getTime());
+        console.log(data.getDate());
+        console.log(data.getFullYear());
+        console.log(data.getMonth());   // Começa em 0, é preciso tratar isso
+        console.log(data.getDay());     // Também começa em 0, e vai até 6
+
+        // Seja bem-vindo, hoje é terça-feira, 15 de novembro de 2016
+        console.log(diaSemana[data.getDay()]);
+        console.log(meses[data.getMonth()]);
+
+        var mensagem = "Seja bem-vindo! Hoje é "+ diaSemana[data.getDay()] +"-feira, "+ data.getDate() +" de "+ meses[data.getMonth()] +" de "+ data.getFullYear();
+        document.write(mensagem);
+    </script>
+
+</body>
+</html>

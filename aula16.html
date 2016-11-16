@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <script type="text/JavaScript">
+        // Criando elementos via JavaScript
+        var button1 = document.createElement("BUTTON");
+        var button2 = document.createElement("BUTTON");
+        var txtBtn1 = document.createTextNode("Clique aqui");
+        var txtBtn2 = document.createTextNode("Clique aqui também");
+
+        button1.appendChild(txtBtn1); // appendChild permite criar elementos dentro de elementos
+        button2.appendChild(txtBtn2);
+
+        document.body.appendChild(button1); // Adicionando um elemento filho ao <body>
+        document.body.appendChild(button2);
+    </script>
+</body>
+</html>
