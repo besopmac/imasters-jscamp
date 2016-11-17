@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+    <style>
+        .bloco {
+            font-family: sans-serif;
+            text-align: center;
+            background: red;
+            padding: 1em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mensagem" class="bloco">Seja bem-vindo!</h1>
+
+    <form id="frmContato">
+        <input type="text" id="txtNome" value="">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script type="text/JavaScript">
+        // Eventos
+
+        var headMensagem = document.getElementById("mensagem");
+        var frmContato = document.getElementById("frmContato");
+        var inputNome = document.getElementById("txtNome");
+
+        var fncMouseOver = function(){
+            // Esse this faz referencia ao elemento que está recebendo o evento
+            this.innerHTML = "Você posicionou o mouse em cima";
+        };
+        var fncMouseOut = function(){
+            this.innerHTML = "Seja bem-vindo!";
+        };
+
+        var submitFormContato = function(){
+            if(inputNome.value == "") {
+                alert("Preencha o campo nome!");
+                return false; // Impede que execute a submissão do formulário
+            }
+        };
+
+
+
+        headMensagem.onmouseover = fncMouseOver;
+        headMensagem.onmouseout = fncMouseOut;
+
+        // Atribuindo o evento ao objeto
+        frmContato.onsubmit = submitFormContato;
+
+        inputNome.onfocus = function(){
+            console.log("O campo recebeu foco");
+        };
+
+        inputNome.onblur = function(){
+            console.log("O campo perdeu o foco");
+        };
+
+        inputNome.focus();
+
+    </script>
+</body>
+</html>

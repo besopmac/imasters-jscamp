@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+    <style>
+        .bloco {
+            font-family: sans-serif;
+            text-align: center;
+            background: red;
+            padding: .5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="msg1" class="bloco">Bloco 1</h1>
+    <h1 id="msg2" class="bloco">Bloco 2</h1>
+    <h1 id="msg3" class="bloco">Bloco 3</h1>
+    <h1 id="msg4" class="bloco">Bloco 4</h1>
+
+    <a href="#" onclick="dispararEventos()">Disparar Eventos</a>
+
+    <script type="text/JavaScript">
+        // Eventos Customizados
+
+        var meuEvento = new Event('acao');
+        var eventoH1 = function(){
+            this.innerHTML = this.innerHTML+" - disparou AÇÃO";
+        }
+
+        var blc1 = document.getElementById('msg1');
+        var blc2 = document.getElementById('msg2');
+        var blc3 = document.getElementById('msg3');
+        var blc4 = document.getElementById('msg4');
+
+        blc1.addEventListener('acao', eventoH1, false);
+        blc2.addEventListener('acao', eventoH1, false);
+        blc3.addEventListener('acao', eventoH1, false);
+        blc4.addEventListener('acao', eventoH1, false);
+
+        function dispararEventos(){
+            blc1.dispatchEvent(meuEvento);
+            blc2.dispatchEvent(meuEvento);
+            blc3.dispatchEvent(meuEvento);
+            blc4.dispatchEvent(meuEvento);
+        };
+
+    </script>
+</body>
+</html>

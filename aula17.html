@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <a href="http://www.google.com" onclick="return alerta()">Clique em mim</a>
+    <a href="#" id="lnkMouseOver">Passe o mouse em cima</a>
+
+    <script type="text/JavaScript">
+        // Eventos
+
+        // Atribuindo função ao MouseOver
+        var lnkMouseOver = document.getElementById("lnkMouseOver");
+        var passaMouse = function(){
+            alert("Você passou o mouse em cima do link");
+        };
+
+        function alerta() {
+            console.log("Clicou no botao!");
+            alert("Você clicou!");
+            return false; // Interrompeu a ida para o link
+        };
+
+        // Atribuindo a função a um evento
+        window.onload = function() {
+            console.log("A página terminou de carregar");
+        };
+
+        lnkMouseOver.onmouseover = passaMouse;
+
+
+    </script>
+</body>
+</html>
