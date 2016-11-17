@@ -1,0 +1,16 @@
+Continuando os estudos de Javascript após o curso
+
+
+1. Continuar o estudo de jQuery (jQuery Mobile, etc);
+
+2. Bootstrap, nosso amigo velho de guerra que está quase na versão 4;
+
+3. AngularJS, two-way-database, etc.;
+
+4. EmberJS;
+
+5. KnockoutJS, basicamente two-way-database;
+
+6. W3 Schools Javascript Reference: http://www.w3schools.com/jsref;
+
+7. Expressões regulares, etc.
