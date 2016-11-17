@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+
+    <h1 id="mostraEsconde" class="retorno"></h1>
+
+    <button type="button" id="btn1">Mostra</button>
+    <button type="button" id="btn2">Esconde</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        // Trabalhando com jQuery
+
+
+
+        $(function(){
+            $(".retorno").html("Bem-vindo ao jQuery!"); // document.getElementById("retorno").innerHTML = ""
+
+            $("#btn1").click(function(){
+                $("#mostraEsconde").show('slow');
+            });
+
+            $("#btn2").click(function(){
+                $("#mostraEsconde").hide('slow');
+            });
+        });
+
+    </script>
+</body>
+</html>
